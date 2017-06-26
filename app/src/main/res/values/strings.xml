@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">周记</string>
+    <string name="text_main">主界面</string>
+    <string name="text_guide">引导页</string>
+    <string name="text_login">登录页</string>
+    <string name="text_modify">修改密码</string>
+    <string name="text_register">注册页面</string>
+    <string name="text_setting">设置页</string>
+    <string name="text_edit">编辑页</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="text_update">修改页</string>
+    <string name="text_modify_user">用户修改信息页</string>
+    <string name="text_about">关于</string>
+</resources>

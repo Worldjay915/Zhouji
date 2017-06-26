@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/nav_header"
+    android:layout_height="170dp"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        app:civ_border_width="2dp"
+        android:src="@mipmap/ic_zhou"
+        app:civ_border_color="@color/splash_bg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="点击头像修改个人信息"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+</LinearLayout>
