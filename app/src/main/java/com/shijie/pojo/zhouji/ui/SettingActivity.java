@@ -376,12 +376,14 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
             case R.id.sc_notification:
                 if (isChecked) {
                     String isOpenNoti = ShareUtils.getString(this, StaticClass.IS_OPEN_NITIFICATION, "");
-                    if (isOpenNoti.equals("")) {
+                    if (isOpenNoti.equals("OPEN_NITIFICATION")) {
                         ShareUtils.putBoolean(this, StaticClass.SWTCH_NITIFICATION, true);
                         startService(new Intent(this, NotificationService.class));
                     }
                     L.i("startService");
                 } else if (!isChecked) {
+                    ShareUtils.putString(this,StaticClass.IS_OPEN_NITIFICATION,"OPEN_NITIFICATION");
+                    ShareUtils.putBoolean(this, StaticClass.SWTCH_NITIFICATION, false);
                     service.stopSelf();
                     service.cancel();
                     L.i("stopService");

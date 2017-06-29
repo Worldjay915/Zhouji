@@ -120,12 +120,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewholder> {
         int state = mList.get(position).getState();
         TaskViewholder viewHolder = (TaskViewholder)mRecyclerView.getChildViewHolder(mRecyclerView.getChildAt(position));
         if (state == StaticClass.STATE_NOT_FINISH){
-            viewHolder.ll_finished_mask.setVisibility(View.INVISIBLE);
+            viewHolder.ll_finished_mask.setVisibility(View.GONE);
+            //notifyItemChanged(position);
         }else {
             viewHolder.ll_finished_mask.setVisibility(View.VISIBLE);
+           // notifyItemChanged(position);
         }
-
-
     }
 
     public void addTask(Task task){

@@ -143,9 +143,9 @@ public class SunFragment extends Fragment {
                         TaskDAO taskDAO = new TaskDAO();
                         int currentWeek = ShareUtils.getInt(getActivity(), StaticClass.CURRENT_WEEK, 0);
                         if (currentWeek == 0 ){
-                            taskList = taskDAO.query(1);
+                            taskList = taskDAO.query(7);
                         }else {
-                            taskList = taskDAO.query(1,currentWeek);
+                            taskList = taskDAO.query(7,currentWeek);
                         }
                         adapter.refreshTask(position,taskList,mRecyclerView);
                         bottomSheetDialog.dismiss();

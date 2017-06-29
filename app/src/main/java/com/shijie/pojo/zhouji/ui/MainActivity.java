@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean openNoti = ShareUtils.getBoolean(this, StaticClass.SWTCH_NITIFICATION, true);
         if (openNoti == true){
             startService(new Intent(this,NotificationService.class));
-            ShareUtils.putString(this,StaticClass.IS_OPEN_NITIFICATION,"");
         }
         //tooltbar
         mToolBar.setTitle("周记");

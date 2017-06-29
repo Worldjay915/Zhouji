@@ -31,7 +31,6 @@ public class TaskDAO {
 
         dbManager = DbManager.getDbManager();
         db = dbManager.getDataBase();
-        L.i("创建数据库");
     }
 
 
