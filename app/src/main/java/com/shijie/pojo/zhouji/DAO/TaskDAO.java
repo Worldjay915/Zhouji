@@ -89,15 +89,15 @@ public class TaskDAO {
         Cursor cursor = db.query(TableConfig.TABLE_TASK,null,"dayOfWeek=? and weekOfYear=?",new String[]{DayOfWeek+"",WeekOfYear+""}, null, null, null, null);
         while (cursor.moveToNext()){
             L.i("查询第"+i+1+"次");
-            int  _id = cursor.getInt(cursor.getColumnIndex("_id"));
-            String title = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_TITLE));
-            String content = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_CONTENT));
-            String timeStamp = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_TIMESTAMP));
-            String icon = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_ICON));
-            int state = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_STATE));
-            int priority = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_PRIORITY));
-            int dayOfWeek = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_DAY_OF_WEEK));
-            int weekOfYear = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_WEEK_OF_YEAR));
+            int  _id = cursor.getInt(0);
+            String title = cursor.getString(1);
+            String content = cursor.getString(2);
+            String timeStamp = cursor.getString(3);
+            String icon = cursor.getString(4);
+            int state = cursor.getInt(5);
+            int priority = cursor.getInt(6);
+            int dayOfWeek = cursor.getInt(7);
+            int weekOfYear = cursor.getInt(8);
             Task task = new Task(_id,title,content,timeStamp,icon,state,priority,dayOfWeek,weekOfYear);
             taskList.add(task);
             i++;
@@ -120,15 +120,15 @@ public class TaskDAO {
 
         while (cursor.moveToNext()){
             L.i("查询第"+i+1+"次");
-            int  _id = cursor.getInt(cursor.getColumnIndex("_id"));
-            String title = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_TITLE));
-            String content = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_CONTENT));
-            String timeStamp = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_TIMESTAMP));
-            String icon = cursor.getString(cursor.getColumnIndex(TableConfig.Task.TASK_ICON));
-            int state = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_STATE));
-            int priority = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_PRIORITY));
-            int dayOfWeek = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_DAY_OF_WEEK));
-            int weekOfYear = cursor.getInt(cursor.getColumnIndex(TableConfig.Task.TASK_WEEK_OF_YEAR));
+            int  _id = cursor.getInt(0);
+            String title = cursor.getString(1);
+            String content = cursor.getString(2);
+            String timeStamp = cursor.getString(3);
+            String icon = cursor.getString(4);
+            int state = cursor.getInt(5);
+            int priority = cursor.getInt(6);
+            int dayOfWeek = cursor.getInt(7);
+            int weekOfYear = cursor.getInt(8);
             Task task = new Task(_id,title,content,timeStamp,icon,state,priority,dayOfWeek,weekOfYear);
             taskList.add(task);
             i++;
