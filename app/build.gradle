@@ -25,16 +25,19 @@ android {
              keyAlias "keyzhouji"
              keyPassword "123456"
           }
-
     }
-
 
     buildTypes {
         release {
-            minifyEnabled false
+            //设置混淆
+            minifyEnabled true
+            // zipAlign 优化
+            zipAlignEnabled true
+            //移除无用的Resource 文件
+            shrinkResources true
+
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
-
 
 //            //指定我们release包的输出文件名就是我们的渠道名字
 //            applicationVariants.all { variant ->
@@ -70,7 +73,9 @@ android {
         xiaomi{
            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
         }
-
+        c360{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "c360"]
+        }
         productFlavors.all{
             flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
         }
@@ -79,15 +84,13 @@ android {
 
 }
 
-
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta1'
+    //compile 'com.android.support.constraint:constraint-layout:1.0.0-beta1'
     testCompile 'junit:junit:4.12'
     compile files('libs/SQLiteStudioRemote.jar')
     compile 'com.android.support:design:24.2.1'

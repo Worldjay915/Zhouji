@@ -75,8 +75,8 @@ public class LoginActivity extends BaseActivity {
             etPassword.setText(password);
         }
         //判断文本框输入是否为空
-        UtilTools.textChangedListenser(etName,mTextInputLayoutName,"用户名输入不能为空");
-        UtilTools.textChangedListenser(etPassword,mTextInputLayoutPass,"密码输入不能为空");
+        UtilTools.textChangedListenser(etName,mTextInputLayoutName,getString(R.string.usernameNotNull));
+        UtilTools.textChangedListenser(etPassword,mTextInputLayoutPass,getString(R.string.writePasswordNotNull));
 
         //对话框
         dialog = new CustomDialog(this,150,150,R.layout.dialog_loding,R.style.Theme_Dialog, Gravity.CENTER);
@@ -104,7 +104,7 @@ public class LoginActivity extends BaseActivity {
     //登录验证
     private void signUp(String name, String password) {
         if (TextUtils.isEmpty(name) || TextUtils.isEmpty(password)){
-            Toast.makeText(this, "请正确输入用户名或密码", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.writeRightUsernameAndPassword, Toast.LENGTH_SHORT).show();
         }else{
             dialog.show();
             //登录验证
@@ -117,14 +117,14 @@ public class LoginActivity extends BaseActivity {
                     if (e==null){
                         dialog.dismiss();
                         if (user.getEmailVerified()){
-                            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, R.string.loginSuccess, Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             finish();
                         }else {
-                            Toast.makeText(LoginActivity.this, "请去您的邮箱进行验证", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, R.string.verifyEmail, Toast.LENGTH_SHORT).show();
                         }
                     }else {
-                        Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, R.string.errorUserameOrPassword, Toast.LENGTH_SHORT).show();
                     }
 
                 }

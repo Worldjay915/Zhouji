@@ -80,7 +80,7 @@ public class ForgetPasswordActivity extends BaseActivity {
             case R.id.btn_set_email:
                 String email = etEmail.getText().toString().trim();
                 if (TextUtils.isEmpty(email)){
-                    Toast.makeText(this, "请输入正确的邮箱号", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.writeRightEmail, Toast.LENGTH_SHORT).show();
                 }else {
                     modifyPasswordByEmail(email);
                 }
@@ -98,15 +98,15 @@ public class ForgetPasswordActivity extends BaseActivity {
                 @Override
                 public void done(BmobException e) {
                     if (e == null) {
-                        Toast.makeText(ForgetPasswordActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgetPasswordActivity.this, R.string.modifySuccess, Toast.LENGTH_SHORT).show();
                         finish();
                     } else {
-                        Toast.makeText(ForgetPasswordActivity.this, "修改密码失败，请检查输入是否有误", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgetPasswordActivity.this, R.string.passwordModifyFailed, Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         } else {
-            Toast.makeText(this, "新密码输入不一致", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.twoPasswordNotSame, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -115,9 +115,9 @@ public class ForgetPasswordActivity extends BaseActivity {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
-                    Toast.makeText(ForgetPasswordActivity.this, "邮件发送成功，注意查收", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetPasswordActivity.this, R.string.sendEmailSuccess, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(ForgetPasswordActivity.this, "邮件发送失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetPasswordActivity.this, R.string.sendEmailFailed, Toast.LENGTH_SHORT).show();
                 }
             }
         });

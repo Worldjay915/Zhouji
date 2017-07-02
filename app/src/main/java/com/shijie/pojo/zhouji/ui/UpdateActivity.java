@@ -94,7 +94,7 @@ public class UpdateActivity extends AppCompatActivity {
     private void initView() {
 
         //设置toolbar
-        mToolBar.setTitle("查看或修改");
+        mToolBar.setTitle(R.string.seeOrModify);
         mToolBar.setNavigationIcon(R.drawable.ic_action_back);
         setSupportActionBar(mToolBar);
 
@@ -103,7 +103,7 @@ public class UpdateActivity extends AppCompatActivity {
 
         UtilTools.setBgColor(this,mCoordinatorLayout);
 
-        ctb.setTitle("查看或修改");
+        ctb.setTitle(getString(R.string.seeOrModify));
         ctb.setExpandedTitleColor(Color.WHITE);
         ctb.setCollapsedTitleTextColor(Color.WHITE);
 
@@ -184,7 +184,7 @@ public class UpdateActivity extends AppCompatActivity {
                         mtask.getState(), mtask.getDayOfWeek(), mtask.getWeekOfYear());
 
                 //snackbar
-                Snackbar.make(ctb, "更新成功", Snackbar.LENGTH_SHORT).setActionTextColor(Color.GREEN).show();
+                Snackbar.make(ctb, R.string.updateSuccess, Snackbar.LENGTH_SHORT).setActionTextColor(Color.GREEN).show();
             }
         });
     }

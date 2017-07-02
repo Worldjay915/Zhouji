@@ -27,13 +27,13 @@
         android:layout_marginLeft="70dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Copyright 2017 Zsj All Rights Reserved."/>
+        android:text="@string/copyright_layout"/>
 
     <TextView
         android:layout_marginTop="400dp"
         android:layout_marginLeft="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="版本号：1.0"/>
+        android:text="@string/versioncoe_layout"/>
 
 </RelativeLayout>

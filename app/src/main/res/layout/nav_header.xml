@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="点击头像修改个人信息"
+        android:text="@string/modifyUser"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/black"
         android:textSize="15sp" />

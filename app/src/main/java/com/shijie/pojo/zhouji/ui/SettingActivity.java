@@ -94,15 +94,15 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
             switch (msg.what) {
                 case -1:
                     dialog.dismiss();
-                    Snackbar.make(cbt, "本地备份失败", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(cbt, R.string.localBackUpFailed, Snackbar.LENGTH_SHORT).show();
                     break;
                 case 0:
                     dialog.dismiss();
-                    Snackbar.make(cbt, "本地备份成功", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(cbt, R.string.localBackUpSuccess, Snackbar.LENGTH_SHORT).show();
                     break;
                 case 1:
                     dialog.dismiss();
-                    Snackbar.make(cbt, "本地恢复成功", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(cbt, R.string.localResftoreSuccess, Snackbar.LENGTH_SHORT).show();
                     break;
             }
 
@@ -153,14 +153,14 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
                 break;
             case R.id.fl_backup:
                 new AlertDialog.Builder(this)
-                        .setTitle("您要备份数据到本地吗？")
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.requestLocalBackup)
+                        .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 backUp();
                             }
                         })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.cancle, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -169,14 +169,14 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
                 break;
             case R.id.fl_restore:
                 new AlertDialog.Builder(this)
-                        .setTitle("您要恢复数据到周记吗？")
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.requestRestore)
+                        .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 restore();
                             }
                         })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.cancle, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -185,34 +185,34 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
                 break;
             case R.id.fl_cloud:
                 new AlertDialog.Builder(this)
-                        .setTitle("云端数据备份或恢复")
-                        .setPositiveButton("备份", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.cloudBackupAndRestore)
+                        .setPositiveButton(R.string.backup, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 cloudBackUp();
                             }
                         })
-                        .setNegativeButton("恢复", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.restore, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 cloudRestore();
                             }
                         })
-                        .setNeutralButton("取消", null).show();
+                        .setNeutralButton(R.string.cancle, null).show();
                 break;
             case R.id.tv_back:
                 finish();
                 break;
             case R.id.ll_delete:
                 new AlertDialog.Builder(this)
-                        .setTitle("您要删除所有记录吗？")
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.requestDeleteALl)
+                        .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 deleteAll();
                             }
                         })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.cancle, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -226,9 +226,9 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
         TaskDAO taskDAO = new TaskDAO();
         boolean delete = taskDAO.deleteAll();
         if (delete){
-            Toast.makeText(this, "数据删除成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.deleteDataSuccess, Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "无数据可删除", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.nullDataDelete, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -342,7 +342,8 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
      */
     private void showDialog() {
         View view = inflater.inflate(R.layout.dialog_loding, null);
-        ((TextView) view.findViewById(R.id.progress_msg)).setText("备份中...");
+        ((TextView) view.findViewById(R.id.progress_msg)).setText(R.string.Backing
+        );
         dialog = new AlertDialog.Builder(this).setView(view).create();
         dialog.show();
     }
@@ -394,8 +395,8 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
     }
 
     private void showLayoutDialog() {
-        new AlertDialog.Builder(this).setTitle("布局方式").
-                setItems(new String[]{"列表展示", "网格展示"},
+        new AlertDialog.Builder(this).setTitle(R.string.layout).
+                setItems(new String[]{getString(R.string.linear), getString(R.string.grid)},
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int position) {

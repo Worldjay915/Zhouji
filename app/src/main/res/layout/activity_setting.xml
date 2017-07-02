@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="主界面"
+                android:text="@string/mainPage_layout"
                 android:textColor="@color/colorAccent" />
 
             <LinearLayout
@@ -41,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="仅显示本周任务" />
+                        android:text="@string/onlyShowWeekTask" />
 
                     <android.support.v7.widget.SwitchCompat
                         android:id="@+id/sc_open_week"
@@ -68,7 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="布局方式" />
+                        android:text="@string/layout" />
 
                 </FrameLayout>
 
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/white_border"
-                        android:text="更换背景颜色" />
+                        android:text="@string/backgroundColor" />
 
                 </FrameLayout>
 
@@ -108,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="备份与还原"
+                android:text="@string/backupAndRestore"
                 android:textColor="@color/colorAccent" />
 
             <LinearLayout
@@ -127,7 +127,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="本地备份数据" />
+                        android:text="@string/localBackup" />
 
                 </FrameLayout>
 
@@ -147,7 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="本地恢复数据" />
+                        android:text="@string/locakRestore" />
 
 
                 </FrameLayout>
@@ -168,7 +168,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="云端备份与恢复数据" />
+                        android:text="@string/cloudBackupAndRestore" />
 
 
                 </FrameLayout>
@@ -187,7 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="清空"
+                android:text="@string/delete"
                 android:textColor="@color/colorAccent" />
 
             <LinearLayout
@@ -205,7 +205,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="清空记录" />
+                        android:text="@string/deleteAll" />
 
                 </FrameLayout>
 
@@ -232,7 +232,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="其他"
+                android:text="@string/other"
                 android:textColor="@color/colorAccent" />
 
             <LinearLayout
@@ -250,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="智能提醒" />
+                        android:text="@string/notification" />
 
                     <android.support.v7.widget.SwitchCompat
                         android:id="@+id/sc_notification"
@@ -269,7 +269,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_back"
-            android:text="返回"
+            android:text="@string/back"
             android:textSize="25sp"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="8dp"/>

@@ -80,7 +80,7 @@
                         android:id="@+id/et_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="标题" />
+                        android:hint="@string/title_layout" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -142,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:hint="内容"
+                    android:hint="@string/content_layout"
                     android:inputType="textMultiLine"
                     android:scrollbars="vertical" />
 
@@ -156,7 +156,7 @@
                 android:layout_marginLeft="240dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="60dp"
-                android:text="2016/12/06"
+                android:text="@string/data_layout"
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp" />
 

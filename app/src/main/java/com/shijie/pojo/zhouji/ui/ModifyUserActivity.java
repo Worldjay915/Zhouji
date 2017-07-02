@@ -99,7 +99,7 @@ public class ModifyUserActivity extends BaseActivity {
                 String name = etName.getText().toString().trim();
                 String desc = etDesc.getText().toString().trim();
                 if (TextUtils.isEmpty(name)){
-                    Toast.makeText(this, "数据为空", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.dataNull, Toast.LENGTH_SHORT).show();
                 }else {
                     updateUserInfo(name, desc);
                 }
@@ -125,7 +125,7 @@ public class ModifyUserActivity extends BaseActivity {
         user.setUsername(name);
         ShareUtils.putString(this, StaticClass.USERNAME, name);
         if (TextUtils.isEmpty(desc)) {
-            desc = "这个人很赖，什么都没有留下...";
+            desc = getString(R.string.nothingDesc);
             user.setDesc(desc);
             ShareUtils.putString(this, StaticClass.DESC, desc);
         } else {
@@ -137,9 +137,9 @@ public class ModifyUserActivity extends BaseActivity {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
-                    Toast.makeText(ModifyUserActivity.this, "更新成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ModifyUserActivity.this, R.string.updateSuccess, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(ModifyUserActivity.this, "更新失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ModifyUserActivity.this, R.string.updataFailed, Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -66,11 +66,11 @@ public class RegisterActivity extends BaseActivity {
 
     //初始化控件
     private void initView() {
-        UtilTools.textChangedListenser(etUser, mTextInputLayoutUser, "用户名不能为空");
+        UtilTools.textChangedListenser(etUser, mTextInputLayoutUser, getString(R.string.usernameNotNull));
         UtilTools.textChangedListenser(etDesc, mTextInputLayoutDesc, "");
-        UtilTools.textChangedListenser(etPassword1, mTextInputLayoutPass, "密码不能为空");
-        UtilTools.textChangedListenser(etPassword2, mTextInputLayoutRePass, "确认密码不能为空");
-        UtilTools.textChangedListenser(etEmail, mTextInputLayoutReEmail, "邮件不能为空");
+        UtilTools.textChangedListenser(etPassword1, mTextInputLayoutPass, getString(R.string.writePasswordNotNull));
+        UtilTools.textChangedListenser(etPassword2, mTextInputLayoutRePass, getString(R.string.writeNewPasswordNotNull));
+        UtilTools.textChangedListenser(etEmail, mTextInputLayoutReEmail, getString(R.string.emailNotNUll));
     }
 
     @OnClick({R.id.tv_back, R.id.btnRegisted})
@@ -94,12 +94,12 @@ public class RegisterActivity extends BaseActivity {
         //判断两次密码输入是否不一致
         if (TextUtils.isEmpty(username)||TextUtils.isEmpty(password1)
                 ||TextUtils.isEmpty(password2)||TextUtils.isEmpty(email)){
-            Toast.makeText(this, "输入信息有误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error, Toast.LENGTH_SHORT).show();
         }else{
             if (password1.equals(password2)) {
                 //判断简介是否为空
                 if (TextUtils.isEmpty(desc)) {
-                    desc = "这个人比较懒，什么都没有写...";
+                    desc = getString(R.string.nothingDesc);
                     ShareUtils.putString(this, "desc", "desc");
                 } else {
                     ShareUtils.putString(this, "desc", "desc");
@@ -115,17 +115,17 @@ public class RegisterActivity extends BaseActivity {
                     @Override
                     public void done(User user, BmobException e) {
                         if (e == null) {
-                            Toast.makeText(RegisterActivity.this, "您已注册成功！", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, R.string.LoginSuccess, Toast.LENGTH_SHORT).show();
                             finish();
-                            Toast.makeText(RegisterActivity.this, "请登录", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, R.string.plaeaseLogin, Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(RegisterActivity.this, "注册失败" + e, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, getString(R.string.registerFail) + e, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
 
             } else {
-                Toast.makeText(this, "两次密码输入不一致", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.twoPasswordNotSame, Toast.LENGTH_SHORT).show();
                }
             }
        }

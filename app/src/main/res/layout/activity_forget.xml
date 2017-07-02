@@ -19,7 +19,7 @@
         android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="修改密码"
+        android:text="@string/modifyPassword_layout"
         android:textSize="25sp"
         android:id="@+id/tv_modify"
         android:textColor="@color/blank"/>
@@ -35,7 +35,7 @@
         android:layout_gravity="right"
         android:layout_height="wrap_content"
         android:id="@+id/et_old_password"
-        android:hint="旧密码"
+        android:hint="@string/oldPassword_layout"
         />
     </android.support.design.widget.TextInputLayout>
 
@@ -50,7 +50,7 @@
         android:layout_gravity="right"
         android:layout_height="wrap_content"
         android:id="@+id/et_new_password1"
-        android:hint="新密码"
+        android:hint="@string/newPasssword_layout"
         />
     </android.support.design.widget.TextInputLayout>
 
@@ -65,7 +65,7 @@
         android:layout_gravity="right"
         android:layout_height="wrap_content"
         android:id="@+id/et_new_password2"
-        android:hint="确认密码"
+        android:hint="@string/newPassword1_layout"
         />
     </android.support.design.widget.TextInputLayout>
 
@@ -74,7 +74,7 @@
         android:layout_gravity="right"
         android:layout_height="wrap_content"
         android:id="@+id/btn_update_password"
-        android:text="确认修改"
+        android:text="@string/sureModifyPasswor_layout"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:background="@drawable/button_bg"
@@ -86,7 +86,7 @@
         android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="忘记密码"
+        android:text="@string/forgetPassword_layout"
         android:textSize="25sp"
         android:textColor="@color/blank"
         android:layout_marginTop="15dp"/>
@@ -102,7 +102,7 @@
         android:layout_gravity="right"
         android:layout_height="wrap_content"
         android:id="@+id/et_email"
-        android:hint="输入邮箱"
+        android:hint="@string/email_layout"
         />
     </android.support.design.widget.TextInputLayout>
 

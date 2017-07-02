@@ -101,7 +101,7 @@ public class EditActivity extends AppCompatActivity {
         L.i("---------------"+dayOfWeek);
         weekOfYear = DataUtils.getWeekOfYear();
 
-        mToolBar.setTitle("开始你的记录吧");
+        mToolBar.setTitle(R.string.startWrite);
         mToolBar.setNavigationIcon(R.drawable.ic_action_back);
         setSupportActionBar(mToolBar);
 
@@ -113,7 +113,7 @@ public class EditActivity extends AppCompatActivity {
         currentDate = DataUtils.getCurrentDate();
         tvDate.setText(currentDate);
 
-        ctb.setTitle("开始你的记录吧");
+        ctb.setTitle(getString(R.string.startWrite));
         ctb.setExpandedTitleColor(Color.WHITE);
         ctb.setCollapsedTitleTextColor(Color.WHITE);
 
@@ -192,13 +192,13 @@ public class EditActivity extends AppCompatActivity {
                 String content = etContent.getText().toString().trim();
                 //加入判断
                 if (TextUtils.isEmpty(title) || TextUtils.isEmpty(content)) {
-                    Snackbar.make(ctb, "请输入标题和内容", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(ctb, R.string.writeTitleAndContent, Snackbar.LENGTH_SHORT).show();
                 } else {
                     TaskDAO taskDAO = new TaskDAO();
                     taskDAO.addTask(title, content, currentDate, randomImgName,
                             state, priority, dayOfWeek, weekOfYear);
                     //snackbar
-                    Snackbar.make(ctb, "保存成功", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(ctb, R.string.saveSuccess, Snackbar.LENGTH_SHORT).show();
                 }
             }
         });

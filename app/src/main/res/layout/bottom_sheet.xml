@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="标记为已完成"
+            android:text="@string/alreadyFinish"
             android:textSize="18sp"/>
     </LinearLayout>
 
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="推延一天"
+            android:text="@string/delayNextDay"
             android:textSize="18sp"/>
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="编辑任务"
+            android:text="@string/editTAsk"
             android:textSize="18sp"/>
     </LinearLayout>
 
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="删除任务"
+            android:text="@string/deleteTask"
             android:textSize="18sp"/>
     </LinearLayout>
 

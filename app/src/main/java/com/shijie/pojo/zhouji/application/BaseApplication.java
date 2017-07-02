@@ -8,7 +8,6 @@ import com.umeng.analytics.MobclickAgent;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
-import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
 
 /**
  * 项目名: Zhouji
@@ -39,7 +38,7 @@ public class BaseApplication extends Application {
         //设置该app的主题根据时间不同显示
        // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
         //打开SQLiteStudio
-        SQLiteStudioService.instance().start(this);
+       // SQLiteStudioService.instance().start(this);
         //Bmob  初始化
         Bmob.initialize(this, StaticClass.BOMB_APPID);
         //设置BmobConfig

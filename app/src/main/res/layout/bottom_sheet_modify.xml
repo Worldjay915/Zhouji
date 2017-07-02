@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="拍照"
+            android:text="@string/camera"
             android:textSize="18sp"/>
     </LinearLayout>
 
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="图库"
+            android:text="@string/pictures"
             android:textSize="18sp"/>
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
-            android:text="取消"
+            android:text="@string/cancle"
             android:textSize="18sp"/>
     </LinearLayout>
 

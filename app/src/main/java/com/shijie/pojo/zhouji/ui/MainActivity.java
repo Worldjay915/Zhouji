@@ -42,6 +42,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,SetFragmentTaskData {
 
     @Bind(R.id.mToolBar)
@@ -93,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startService(new Intent(this,NotificationService.class));
         }
         //tooltbar
-        mToolBar.setTitle("周记");
-        mToolBar.setSubtitle("为你的一周安排任务吧");
+        mToolBar.setTitle(R.string.app_name);
+        mToolBar.setSubtitle(R.string.writeTask);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
