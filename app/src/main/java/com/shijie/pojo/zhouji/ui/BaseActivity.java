@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+
 /**
  * 项目名: Zhouji
  * 包名: com.shijie.pojo.zhouji.ui
@@ -18,10 +19,7 @@ public class BaseActivity  extends AppCompatActivity{
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
     }
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

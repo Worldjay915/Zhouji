@@ -118,6 +118,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewholder> {
 
     public void refreshTask(int position, List<Task> mList,RecyclerView mRecyclerView){
         int state = mList.get(position).getState();
+        //通过ViewHolder找出缓存的对应控件
         TaskViewholder viewHolder = (TaskViewholder)mRecyclerView.getChildViewHolder(mRecyclerView.getChildAt(position));
         if (state == StaticClass.STATE_NOT_FINISH){
             viewHolder.ll_finished_mask.setVisibility(View.GONE);
